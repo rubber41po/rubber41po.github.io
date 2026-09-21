@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天龙多开器 - 高效多账号管理与自动化工具</title>
+    <meta name="description" content="天龙多开器是一款专为天龙八部游戏设计的多开管理工具，支持一键批量启动、多开优化、资源监控及防封号设置，提供稳定、安全的游戏辅助体验。">
+    <meta name="keywords" content="天龙多开器,天龙八部多开,游戏多开工具,批量启动,游戏辅助">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn-download {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn-download:hover {
+            background-color: #d35400;
+        }
+
+        .btn-download:active {
+            transform: scale(0.98);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Features Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(230, 126, 34, 0.1);
+            color: var(--accent-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Tool Interface Preview */
+        .interface-preview {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .interface-header {
+            background-color: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .interface-title {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .interface-body {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mock-window {
+            width: 100%;
+            max-width: 800px;
+            background: #2d2d2d;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .mock-title-bar {
+            background: #3e3e3e;
+            padding: 8px 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+
+        .mock-content {
+            padding: 20px;
+            color: #ccc;
+        }
+
+        .mock-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .mock-table th {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #555;
+            color: #aaa;
+        }
+
+        .mock-table td {
+            padding: 8px;
+            border-bottom: 1px solid #444;
+        }
+
+        .mock-input {
+            width: 100%;
+            padding: 10px;
+            background: #3e3e3e;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .mock-btn {
+            padding: 8px 16px;
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Guide Section */
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .guide-sidebar {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+        }
+
+        .guide-sidebar h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+        }
+
+        .guide-list a {
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .guide-list a:hover, .guide-list a.active {
+            background-color: rgba(230, 126, 34, 0.1);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .guide-content article {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .guide-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .guide-content h3 {
+            color: var(--primary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .guide-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .guide-content li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Consolas", "Monaco", monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-secondary);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .guide-sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+            
+            .interface-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 天龙多开器
+            </a>
+            <nav class="nav-links">
+                <a href="#features">功能特性</a>
+                <a href="#guide">使用指南</a>
+                <a href="#faq">常见问题</a>
+                <a href="#download">下载中心</a>
+            </nav>
+            <a href="#download" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>高效管理，一键启动</h1>
+            <p>专为天龙八部游戏玩家打造的专业多开管理工具。支持多开运行、资源监控与配置管理，提升游戏效率，畅享多号体验。</p>
+            <div class="hero-tags">
+                <span class="tag">多开管理</span>
+                <span class="tag">一键启动</span>
+                <span class="tag">防封号优化</span>
+                <span class="tag">资源监控</span>
+            </div>
+            <a href="#download" class="btn-download" style="font-size: 1.1rem; padding: 12px 30px;">免费下载客户端</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心功能亮点</h2>
+                    <p>全方位的游戏辅助工具，满足您对多开运行的各种需求。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="icon-box">⚡</div>
+                        <h3>极速多开启动</h3>
+                        <p>内置智能多开引擎，支持一键批量启动多个游戏实例。通过优化内存分配，确保多开运行流畅不卡顿，大幅提升练级效率。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">🛡️</div>
+                        <h3>智能防封监测</h3>
+                        <p>集成智能行为模拟算法，自动调整鼠标移动轨迹和点击频率，有效降低被系统检测为异常操作的风险，保障账号安全。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">📊</div>
+                        <h3>资源实时监控</h3>
+                        <p>提供CPU、内存及网络占用情况的实时仪表盘。当检测到系统资源过高时，自动提示优化策略，防止因资源不足导致游戏闪退。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">⚙️</div>
+                        <h3>配置文件管理</h3>
+                        <p>支持保存不同角色的启动配置。无论是手动输入账号密码，还是导入TXT列表，都能快速切换环境，实现一键配置。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">🔄</div>
+                        <h3>自动循环任务</h3>
+                        <p>内置任务队列系统，可设置挂机脚本、自动领取奖励等自动化操作，解放双手，让角色24小时在线。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">🔗</div>
+                        <h3>安全稳定运行</h3>
+                        <p>采用纯本地化运行模式，不联网上传任何数据。软件体积小巧，安装卸载便捷，对系统环境无污染。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interface Preview -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>软件界面预览</h2>
+                    <p>简洁直观的操作逻辑，让多开管理变得轻松简单。</p>
+                </div>
+                <div class="interface-preview">
+                    <div class="interface-header">
+                        <span class="interface-title">控制台视图</span>
+                        <span style="font-size: 0.8rem; color: #666;">Version 2.0.1</span>
+                    </div>
+                    <div class="interface-body">
+                        <div class="mock-window">
+                            <div class="mock-title-bar">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="mock-content">
+                                <table class="mock-table">
+                                    <thead>
+                                        <tr>
+                                            <th>状态</th>
+                                            <th>账号</th>
+                                            <th>服务器</th>
+                                            <th>资源占用</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="color: #27c93f;">● 运行中</td>
+                                            <td>WangWu_01</td>
+                                            <td>天龙八部-电信1</td>
+                                            <td>350MB</td>
+                                            <td><button class="mock-btn" style="background:#555; padding:2px 8px; font-size:0.8rem;">停止</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #27c93f;">● 运行中</td>
+                                            <td>Sword_99</td>
+                                            <td>天龙八部-电信1</td>
+                                            <td>348MB</td>
+                                            <td><button class="mock-btn" style="background:#555; padding:2px 8px; font-size:0.8rem;">停止</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #27c93f;">● 运行中</td>
+                                            <td>Fairy_X</td>
+                                            <td>天龙八部-网通1</td>
+                                            <td>352MB</td>
+                                            <td><button class="mock-btn" style="background:#555; padding:2px 8px; font-size:0.8rem;">停止</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div style="display:flex; gap:10px; align-items:flex-end;">
+                                    <div style="flex:1;">
+                                        <div style="font-size:0.8rem; margin-bottom:5px; color:#aaa;">启动数量设置</div>
+                                        <input type="text" class="mock-input" value="3" readonly>
+                                    </div>
+                                    <button class="mock-btn" style="width: 100px;">一键启动</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section" style="background-color: #fafafa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>使用指南</h2>
+                    <p>详细的操作步骤与注意事项，助您快速上手。</p>
+                </div>
+                <div class="guide-container">
+                    <aside class="guide-sidebar">
+                        <h3>目录导航</h3>
+                        <ul class="guide-list">
+                            <li><a href="#install" class="active">1. 安装与配置</a></li>
+                            <li><a href="#usage">2. 基本使用方法</a></li>
+                            <li><a href="#settings">3. 参数设置详解</a></li>
+                            <li><a href="#tips">4. 常见问题排查</a></li>
+                        </ul>
+                    </aside>
+                    <div class="guide-content">
+                        <article id="install">
+                            <h2>1. 安装与配置</h2>
+                            <p>在开始使用之前，请确保您的电脑已安装官方客户端《天龙八部》。</p>
+                            <h3>下载安装包</h3>
+                            <p>访问下载中心获取最新版本的安装包。解压后直接运行安装程序，按照向导提示完成安装，无需复杂的配置。</p>
+                            <h3>环境检测</h3>
+                            <p>首次运行软件时，会自动检测游戏安装路径。如果检测失败，请手动选择游戏主程序（通常是 `game.exe`）。</p>
+                        </article>
+
+                        <article id="usage">
+                            <h2>2. 基本使用方法</h2>
+                            <p>软件界面设计简洁明了，主要分为状态监控区、账号管理区和操作控制区。</p>
+                            <h3>添加账号</h3>
+                            <ul>
+                                <li>点击“添加账号”按钮，输入游戏账号和密码。</li>
+                                <li>您也可以将账号列表复制到TXT文档中，使用“批量导入”功能。</li>
+                                <li>点击“保存配置”可将当前账号列表存入本地数据库。</li>
+                            </ul>
+                            <h3>启动游戏</h3>
+                            <p>在确认账号列表无误后，点击主界面的“一键启动”按钮。软件将自动创建多个游戏进程并分配独立资源。</p>
+                        </article>
+
+                        <article id="settings">
+                            <h2>3. 参数设置详解</h2>
+                            <p>为了保证多开的稳定性，建议根据您的电脑配置调整以下参数。</p>
+                            <h3>内存分配</h3>
+                            <p>在“设置”菜单中，可以调整每个游戏实例的内存上限。建议设置为物理内存的 20%-30%，避免系统因内存溢出而蓝屏。</p>
+                            <h3>进程保护</h3>
+                            <p>开启“进程保护”功能后，即使您最小化多开器，游戏进程也不会被系统自动关闭或清理。</p>
+                        </article>
+
+                        <article id="tips">
+                            <h2>4. 常见问题排查</h2>
+                            <p>如果遇到游戏闪退或无法启动的情况，请检查以下几点：</p>
+                            <ul>
+                                <li><strong>显卡驱动过旧：</strong> 请更新显卡驱动至最新版本。</li>
+                                <li><strong>杀毒软件拦截：</strong> 部分杀毒软件可能将辅助工具误判为病毒，请在白名单中添加。</li>
+                                <li><strong>系统资源不足：</strong> 关闭其他不必要的后台程序，释放内存。</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题 (FAQ)</h2>
+                    <p>关于多开器使用中您可能遇到的问题解答。</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 天龙多开器支持 Windows 10 吗？</div>
+                        <div class="faq-answer">
+                            <p>A: 是的，本软件已完全适配 Windows 7、Windows 10 和 Windows 11 操作系统。请确保系统已安装必要的运行库。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 使用多开器会导致账号被封吗？</div>
+                        <div class="faq-answer">
+                            <p>A: 本工具采用纯本地运行，不联网上传数据。配合智能防封算法，正常使用下风险极低。但请勿进行违规的脚本刷怪操作。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 软件可以免费使用吗？</div>
+                        <div class="faq-answer">
+                            <p>A: 提供基础功能免费版，支持多开数量有限。专业版提供更多开号上限和高级监控功能，可在官网查看详细对比。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 游戏更新后多开器还能用吗？</div>
+                        <div class="faq-answer">
+                            <p>A: 软件会定期更新以兼容新版本的游戏客户端。如果遇到不兼容，请检查是否有版本更新提示。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section id="download" class="section">
+            <div class="container" style="text-align: center;">
+                <div style="background: linear-gradient(to right, #e67e22, #f39c12); padding: 60px 40px; border-radius: 16px; color: white; box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);">
+                    <h2 style="font-size: 2rem; margin-bottom: 20px;">准备好提升效率了吗？</h2>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">立即下载最新版天龙多开器，开启您的多开之旅。</p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="#" class="btn-download" style="background: white; color: var(--accent-color);">下载 v2.0.1 (免费版)</a>
+                        <a href="#" style="border: 2px solid white; padding: 10px 24px; border-radius: var(--radius); font-weight: 600;">查看更新日志</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        专注于为游戏玩家提供高效、稳定的辅助工具。致力于解决多开难题，提升游戏体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#guide">使用教程</a></li>
+                        <li><a href="#faq">帮助中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>隐私声明</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方QQ群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 天龙多开器 Tool. All Rights Reserved. 本站仅供技术交流与学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                              </html>
