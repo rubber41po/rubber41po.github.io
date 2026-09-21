@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="偶尔邓紫棋 - 专注邓紫棋（G.E.M.）音乐作品、演唱会资讯、歌词解析及粉丝社区互动的官方网站。收录经典歌曲与最新动态。">
+    <meta name="keywords" content="偶尔, 邓紫棋, G.E.M., 歌手, 音乐, 演唱会, 歌词">
+    <title>偶尔邓紫棋 - 邓紫棋音乐作品与演唱会资讯平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --primary-dark: #c2185b;
+            --secondary-color: #1a1a1a;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+            color: var(--secondary-color);
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.85), rgba(156, 39, 176, 0.7)), url('https://picsum.photos/seed/gem/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 36px;
+            background-color: var(--white);
+            color: var(--primary-color);
+            font-weight: 700;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: var(--bg-light);
+        }
+
+        /* Featured Album */
+        .featured-album {
+            display: flex;
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .album-cover {
+            flex: 1;
+            min-height: 350px;
+            background: url('https://picsum.photos/seed/albumcover/800/600') center/cover;
+        }
+
+        .album-info {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .album-tag {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+
+        .album-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .album-meta {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .album-desc {
+            margin-bottom: 30px;
+            color: var(--text-main);
+        }
+
+        .album-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 1px solid #ccc;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Music Grid */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .music-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .music-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .music-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .news-card:hover {
+            border-bottom-color: var(--primary-color);
+        }
+
+        .news-date {
+            min-width: 60px;
+            text-align: center;
+            padding-top: 4px;
+        }
+
+        .date-day {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .date-month {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .news-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .news-content h3:hover {
+            color: var(--primary-color);
+        }
+
+        .news-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                padding: 0 10px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .featured-album {
+                flex-direction: column;
+            }
+
+            .album-cover {
+                min-height: 250px;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>偶尔</span>邓紫棋
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#music">音乐作品</a></li>
+                    <li><a href="#news">最新动态</a></li>
+                    <li><a href="#live">演唱会</a></li>
+                    <li><a href="#about">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>偶尔 邓紫棋</h1>
+                <p>探索 G.E.M. 的音乐宇宙，感受灵魂深处的共鸣。无论是激昂的摇滚还是深情的慢歌，总有一首旋律属于你。</p>
+                <a href="#music" class="cta-button">立即聆听</a>
+            </div>
+        </section>
+
+        <!-- Featured Album -->
+        <section class="container section-padding">
+            <div class="featured-album">
+                <div class="album-cover"></div>
+                <div class="album-info">
+                    <span class="album-tag">最新专辑</span>
+                    <h2 class="album-title">启示录启示录 II</h2>
+                    <p class="album-meta">2023 · 流行摇滚 / 摇滚 · 12首作品</p>
+                    <p class="album-desc">
+                        这张专辑延续了 G.E.M. 一贯的高完成度制作，融合了电子元素与传统摇滚乐器，探讨现代人在快节奏生活中的情感与思考。同名主打歌《启示录》一经发布便席卷各大音乐榜单。
+                    </p>
+                    <div class="album-actions">
+                        <a href="#" class="btn btn-primary">立即试听</a>
+                        <a href="#" class="btn btn-outline">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Works Section -->
+        <section id="music" class="section-padding" style="background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">热门单曲</h2>
+                <div class="music-grid">
+                    <!-- Card 1 -->
+                    <article class="music-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/gem1/400/300" alt="来自天堂的魔鬼">
+                            <div class="play-overlay">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">来自天堂的魔鬼</h3>
+                            <p class="card-subtitle">专辑：摩天动物园</p>
+                            <div class="card-tags">
+                                <span class="tag">流行</span>
+                                <span class="tag">经典</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="music-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/gem2/400/300" alt="光年之外">
+                            <div class="play-overlay">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">光年之外</h3>
+                            <p class="card-subtitle">电影：太空旅客 主题曲</p>
+                            <div class="card-tags">
+                                <span class="tag">OST</span>
+                                <span class="tag">抒情</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="music-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/gem3/400/300" alt="泡沫">
+                            <div class="play-overlay">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">泡沫</h3>
+                            <p class="card-subtitle">专辑：新的心跳</p>
+                            <div class="card-tags">
+                                <span class="tag">抒情</span>
+                                <span class="tag">高音</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="music-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/gem4/400/300" alt="句号">
+                            <div class="play-overlay">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">句号</h3>
+                            <p class="card-subtitle">专辑：摩天动物园</p>
+                            <div class="card-tags">
+                                <span class="tag">摇滚</span>
+                                <span class="tag">情感</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">最新动态</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">15</div>
+                            <div class="date-month">Oct</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>邓紫棋“启示录”世界巡回演唱会香港站圆满结束</h3>
+                            <p class="news-excerpt">G.E.M. 以极具震撼力的舞台表现和超高音域技巧，为现场数万名观众带来了一场视听盛宴。</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">02</div>
+                            <div class="date-month">Oct</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>新单曲《摩天动物园》MV正式上线</h3>
+                            <p class="news-excerpt">MV以独特的视觉风格展现了都市生活的众生相，歌词犀利，直击人心。</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-date">
+                            <div class="date-day">28</div>
+                            <div class="date-month">Sep</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>邓紫棋担任《歌手2024》首位补位歌手</h3>
+                            <p class="news-excerpt">回归舞台的她再次展现了顶级的唱功，引发全网热议。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concert Section -->
+        <section id="live" class="section-padding" style="background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">演唱会资讯</h2>
+                <div class="featured-album" style="background-color: var(--white);">
+                    <div class="album-cover" style="background-image: url('https://picsum.photos/seed/concert/800/600');"></div>
+                    <div class="album-info">
+                        <span class="album-tag">即将开售</span>
+                        <h2 class="album-title">启示录世界巡回演唱会 2024</h2>
+                        <p class="album-meta">巡演计划覆盖全球数十个城市，包含全新的舞台设计与视听体验。</p>
+                        <div class="album-actions">
+                            <a href="#" class="btn btn-primary">查看场次</a>
+                            <a href="#" class="btn btn-outline">加入购票提醒</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于偶尔邓紫棋</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        偶尔邓紫棋是一个非官方的粉丝信息聚合平台，旨在为喜爱 G.E.M. 的听众提供最新的音乐资讯、歌词解析及演唱会动态。我们尊重版权，所有内容仅供学习交流。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">音乐作品</a></li>
+                        <li><a href="#">演唱会票务</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">官方微信</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持与反馈</h4>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 偶尔邓紫棋. All Rights Reserved. 本站为粉丝作品，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // 简单的平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // 移动端点击后自动收起菜单
+                    var navList = document.getElementById('nav-list');
+                    if (navList.classList.contains('show')) {
+                        navList.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
