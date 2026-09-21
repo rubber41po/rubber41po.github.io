@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高价彩礼专项治理 - 移风易俗与婚嫁新风尚指导平台</title>
+    <meta name="description" content="高价彩礼专项治理专题页面，提供关于婚嫁陋习治理的政策解读、移风易俗宣传、典型案例分析及文明婚俗倡议，引导树立健康婚恋观。">
+    <meta name="keywords" content="高价彩礼专项治理, 移风易俗, 婚嫁习俗, 文明婚俗, 婚礼新风尚, 红白喜事">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-light: #ffebee;
+            --secondary-color: #2c3e50;
+            --accent-color: #fbc02d;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f5f7fa;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+
+        .nav-cta:hover {
+            background-color: #b71c1c;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #b71c1c 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--bg-card);
+            margin-top: -40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            padding: 0 10px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Policy Cards */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .guide-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .guide-list span {
+            font-size: 0.8rem;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background-color: #1a252f;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #f9f9f9;
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <span>文明婚俗</span>平台
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#policy">政策法规</a></li>
+                    <li><a href="#guide">移风易俗</a></li>
+                    <li><a href="#report">举报渠道</a></li>
+                    <li><a href="#contact" class="nav-cta">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>高价彩礼专项治理</h1>
+            <p>破除婚嫁陋习，树立文明新风。我们致力于推动婚嫁领域移风易俗，减轻家庭负担，促进家庭和谐与社会稳定。</p>
+            <a href="#guide" class="hero-btn">了解治理政策</a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">省市治理方案</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">典型案例公示</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50%</span>
+                <span class="stat-label">平均彩礼降幅</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10万+</span>
+                <span class="stat-label">群众参与投票</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container main-grid" id="policy">
+        <!-- Left Column: Policies & News -->
+        <section class="content-area">
+            <div class="section-header">
+                <h2 class="section-title">治理政策与动态</h2>
+                <a href="#" class="view-all">查看全部 &rarr;</a>
+            </div>
+
+            <div class="policy-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">重磅政策</span>
+                        <img src="https://picsum.photos/seed/culture1/400/250" alt="移风易俗宣传图">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">关于进一步推进婚嫁领域移风易俗的指导意见</h3>
+                        <p class="card-desc">详细解读中央及地方关于遏制高价彩礼、大操大办的最新政策精神，明确治理红线与具体措施。</p>
+                        <div class="card-footer">
+                            <span>政策解读</span>
+                            <span>2023-10-15</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">地方实践</span>
+                        <img src="https://picsum.photos/seed/culture2/400/250" alt="社区活动图">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">某省开展“零彩礼”“低彩礼”模范家庭评选活动</h3>
+                        <p class="card-desc">报道各地通过评选表彰、积分奖励等方式，引导群众自觉抵制高价彩礼的生动实践案例。</p>
+                        <div class="card-footer">
+                            <span>典型案例</span>
+                            <span>2023-10-12</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">宣传视频</span>
+                        <img src="https://picsum.photos/seed/culture3/400/250" alt="视频封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">短视频：拒绝高价彩礼，让爱回归纯粹</h3>
+                        <p class="card-desc">通过感人故事和专家访谈，阐述高额彩礼对婚姻幸福的负面影响，倡导简约适度的婚俗礼仪。</p>
+                        <div class="card-footer">
+                            <span>宣传教育</span>
+                            <span>2023-10-10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-header" style="margin-top: 40px;">
+                <h2 class="section-title">常见问题解答 (FAQ)</h2>
+            </div>
+
+            <div class="faq-section">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">什么是高价彩礼专项治理？</div>
+                        <div class="faq-answer">专项治理旨在通过宣传教育、制度约束、典型示范等多种手段，遏制婚嫁中的天价彩礼、铺张浪费、攀比炫富等不良风气，引导建立平等、节约、文明的婚恋观。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">治理工作主要包含哪些内容？</div>
+                        <div class="faq-answer">主要内容包括修订村规民约、建立红白理事会、开展移风易俗宣传、建立彩礼限额指导标准、开展典型评选以及畅通举报投诉渠道等。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果遇到高额彩礼问题可以向哪里反映？</div>
+                        <div class="faq-answer">您可以拨打当地民政局或文明办的监督举报电话，或通过本网站的“举报渠道”板块进行匿名反馈。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <!-- Guide Widget -->
+            <div class="sidebar-widget" id="guide">
+                <h3 class="sidebar-title">治理指南</h3>
+                <ul class="guide-list">
+                    <li><a href="#">如何制定合理的婚嫁标准 <span>步骤</span></a></li>
+                    <li><a href="#">彩礼纠纷调解流程 <span>法律</span></a></li>
+                    <li><a href="#">“零彩礼”夫妻的幸福生活 <span>故事</span></a></li>
+                    <li><a href="#">婚俗改革试点城市名单 <span>名单</span></a></li>
+                    <li><a href="#">农村红白理事会章程范本 <span>模板</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Form Widget -->
+            <div class="sidebar-widget" id="report">
+                <h3 class="sidebar-title">问题反映</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">如果您发现身边存在高额彩礼、大操大办等违规行为，欢迎反馈。</p>
+                <form class="form-group">
+                    <input type="text" placeholder="您的姓名（匿名）" style="margin-bottom: 10px;">
+                    <input type="tel" placeholder="联系电话" style="margin-bottom: 10px;">
+                    <textarea rows="3" placeholder="简要描述情况..." style="margin-bottom: 10px;"></textarea>
+                    <button type="button" class="submit-btn" style="padding: 10px;">提交反馈</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Call to Action Banner -->
+    <section class="container" style="margin-bottom: 60px;">
+        <div style="background-color: var(--secondary-color); border-radius: var(--border-radius); padding: 40px; text-align: center; color: white;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 15px;">倡议：简约婚礼，幸福一生</h2>
+            <p style="margin-bottom: 30px; opacity: 0.9;">不比阔气，不摆排场，让婚礼回归爱与承诺的本质。</p>
+            <a href="#" class="hero-btn" style="background-color: var(--accent-color); color: var(--secondary-color);">签署文明承诺书</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>文明婚俗平台</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">致力于推广健康向上的婚恋文化，引导社会风气向善向好，为构建和谐社会贡献力量。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">治理政策</a></li>
+                        <li><a href="#">典型案例</a></li>
+                        <li><a href="#">操作指南</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：010-12345678</li>
+                        <li>邮箱：service@wenminghunsu.com</li>
+                        <li>地址：中国·某市文明办</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 高价彩礼专项治理工作办公室 版权所有
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+              </html>
