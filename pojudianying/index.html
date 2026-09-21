@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="破局电影网提供深度电影解析、经典破局剧情解读、高分悬疑与动作片推荐，以及电影制作幕后与观影指南。">
+    <meta name="keywords" content="破局电影,电影解析,悬疑电影推荐,动作电影,电影幕后">
+    <title>破局电影-深度解析与高分影片推荐平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #e50914;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 5px 15px;
+            align-items: center;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 5px;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/cinema/1920/1080'); /* 使用随机种子图片模拟电影海报背景 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #c40812;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* 章节通用样式 */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .section-more:hover {
+            color: var(--accent-color);
+        }
+
+        /* 影片卡片网格 */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .poster-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 poster ratio */
+            background-color: #eee;
+        }
+
+        .poster-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .movie-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .rating {
+            color: #f5c518;
+            font-weight: bold;
+        }
+
+        /* 特色文章列表 */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-item {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .article-item:hover {
+            transform: translateX(5px);
+        }
+
+        .article-img {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-category {
+            font-size: 12px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-footer {
+            margin-top: auto;
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* 专题横幅 */
+        .feature-banner {
+            background-color: #2c3e50;
+            border-radius: 12px;
+            padding: 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/tech/800/300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-text h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-text p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* FAQ 区域 */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #aaa;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                height: 400px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .article-item {
+                flex-direction: column;
+            }
+            .article-img {
+                width: 100%;
+                height: 180px;
+            }
+            .feature-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .search-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">破局<span>电影</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">悬疑解密</a>
+                <a href="#">高分榜单</a>
+                <a href="#">幕后制作</a>
+                <a href="#">影评专栏</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索电影、导演或解析...">
+                <button type="button">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag">年度重磅解析</span>
+                    <h1>在光影中寻找<br>命运的出口</h1>
+                    <p>深度剖析经典“破局”题材影片，从叙事结构到人物心理，带你重新理解那些令人屏息的转折瞬间。</p>
+                    <div>
+                        <a href="#" class="btn btn-primary">开始阅读</a>
+                        <a href="#" class="btn btn-outline">观看推荐</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Banner -->
+        <section class="container">
+            <div class="feature-banner">
+                <div class="feature-text">
+                    <h2>经典重映计划</h2>
+                    <p>重温《肖申克的救赎》与《盗梦空间》，探讨“希望”与“梦境”的永恒主题。</p>
+                    <a href="#" class="btn btn-primary" style="background-color: white; color: #2c3e50;">查看专题</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Movies Grid -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门破局影片</h2>
+                <a href="#" class="section-more">查看全部 &rarr;</a>
+            </div>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie1/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">禁闭岛</h3>
+                        <div class="movie-meta">
+                            <span>悬疑 / 惊悚</span>
+                            <span class="rating">9.2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 2 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie2/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">致命魔术</h3>
+                        <div class="movie-meta">
+                            <span>剧情 / 悬疑</span>
+                            <span class="rating">9.3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 3 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie3/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">看不见的客人</h3>
+                        <div class="movie-meta">
+                            <span>犯罪 / 犀利</span>
+                            <span class="rating">8.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 4 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie4/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">黑客帝国</h3>
+                        <div class="movie-meta">
+                            <span>科幻 / 动作</span>
+                            <span class="rating">9.0</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 5 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie5/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">楚门的世界</h3>
+                        <div class="movie-meta">
+                            <span>剧情 / 哲思</span>
+                            <span class="rating">9.3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 6 -->
+                <article class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="https://picsum.photos/seed/movie6/300/420" alt="电影海报">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="movie-title">搏击俱乐部</h3>
+                        <div class="movie-meta">
+                            <span>剧情 / 暴力</span>
+                            <span class="rating">8.8</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deep Dive Articles -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">深度解析</h2>
+                <a href="#" class="section-more">更多文章 &rarr;</a>
+            </div>
+            <div class="article-list">
+                <article class="article-item">
+                    <div class="article-img">
+                        <img src="https://picsum.photos/seed/analysis1/400/300" alt="分析图片">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-category">叙事结构</div>
+                        <h3 class="article-title">电影中“破局”时刻的叙事技巧：如何设计令人意想不到的结局</h3>
+                        <p class="article-excerpt">在悬疑电影中，主角如何打破僵局？本文将从剧本创作角度，分析“三幕式结构”在反转结局中的具体应用...</p>
+                        <div class="article-footer">
+                            <span>2023-10-15</span>
+                            <span>阅读 3,240</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-img">
+                        <img src="https://picsum.photos/seed/analysis2/400/300" alt="分析图片">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-category">心理分析</div>
+                        <h3 class="article-title">禁闭岛：当主角的“破局”成为自我欺骗的开始</h3>
+                        <p class="article-excerpt">泰迪·丹尼尔斯一直试图逃离孤岛寻找真相，但这真的是破局吗？深入探讨电影中主角的心理防御机制与悲剧内核。</p>
+                        <div class="article-footer">
+                            <span>2023-10-12</span>
+                            <span>阅读 5,102</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">什么是“破局电影”？</div>
+                    <div class="faq-answer">
+                        <p>“破局电影”通常指那些包含核心冲突、主角面临绝境，并通过智慧、勇气或转折打破僵局，改变命运走向的影片。这类电影往往以精彩的剧情反转和逻辑闭环著称。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何判断一部电影是否适合观看？</div>
+                    <div class="faq-answer">
+                        <p>建议查看影片的评分、类型标签以及剧情简介。对于“破局”类题材，通常推荐悬疑、惊悚或犯罪类型，这类电影更注重情节的紧凑和逻辑的推演。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">网站提供哪些服务？</div>
+                    <div class="faq-answer">
+                        <p>我们提供电影深度解析、幕后制作揭秘、高分影片推荐以及观影指南，帮助观众更好地理解电影艺术。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于破局电影</h3>
+                    <p style="font-size: 14px; line-height: 1.8;">致力于为影迷提供最专业、最深入的电影解析平台。我们不提供资源下载，只专注于内容的分享与思考。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>栏目导航</h3>
+                    <ul>
+                        <li><a href="#">悬疑解密</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">影评专栏</a></li>
+                        <li><a href="#">幕后制作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>投稿邮箱：editor@pujue.com</li>
+                        <li>商务合作：bd@pujue.com</li>
+                        <li>用户反馈：feedback@pujue.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 破局电影网 版权所有 | 仅供展示使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        }
+                    });
+                    
+                    // 切换当前项
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+          </html>
