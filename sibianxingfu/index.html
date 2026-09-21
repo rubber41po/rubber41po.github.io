@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="四边形复习课件-提供小学及初中数学四边形知识体系复习，包含平行四边形、矩形、菱形、正方形性质与判定，配套练习题与教学设计。">
+    <meta name="keywords" content="四边形复习课件,数学课件,平行四边形,矩形,菱形,正方形,几何教学">
+    <title>四边形复习课件-小学初中数学几何知识点梳理与练习</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f7fa;
+            --accent-color: #ff6b6b;
+            --text-main: #2c3e50;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .cta-btn:hover {
+            background-color: #357abd;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .download-card {
+            background: #fff;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .file-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ffebeb;
+            color: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .btn-large {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .btn-large:hover {
+            background-color: #357abd;
+        }
+
+        /* Knowledge Structure */
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .card-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .card-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafafa;
+        }
+
+        /* Practice Section */
+        .practice-section {
+            padding: 80px 0;
+        }
+
+        .practice-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .question-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 40px;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .option-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option-item:hover {
+            background-color: #f0f7ff;
+            border-color: var(--primary-color);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3h18v18H3z"></path>
+                    <path d="M3 9h18"></path>
+                    <path d="M9 21V9"></path>
+                </svg>
+                <span>几何课堂</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课件下载</a></li>
+                    <li><a href="#">知识点解析</a></li>
+                    <li><a href="#">习题训练</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="cta-btn">立即获取</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>四边形复习课件</h1>
+                <p>系统梳理平行四边形、矩形、菱形、正方形的性质与判定，帮助师生高效备考，巩固几何基础。</p>
+                
+                <div class="download-card" id="download">
+                    <div class="file-info">
+                        <div class="file-icon">PDF</div>
+                        <div>
+                            <div>初中数学四边形复习总复习.pptx</div>
+                            <div style="font-size: 0.8rem; color: #999;">包含：完整教案 + 知识导图 + 随堂练习</div>
+                        </div>
+                    </div>
+                    <button class="btn-large" onclick="alert('演示模式：请点击下方链接下载完整资源')">下载课件资源</button>
+                    <div style="font-size: 0.8rem; color: #999; text-align: center;">已帮助 10,000+ 学生掌握四边形知识</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Structure -->
+        <section class="container">
+            <h2 class="section-title">知识体系梳理</h2>
+            <p class="section-subtitle">从基础概念到深度应用，构建完整的四边形认知框架</p>
+            
+            <div class="knowledge-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-icon">▱</div>
+                    <h3>平行四边形</h3>
+                    <p>两组对边分别平行且相等的特殊四边形。</p>
+                    <ul class="card-list">
+                        <li>性质：对边平行且相等、对角相等、邻角互补</li>
+                        <li>判定：两组对边分别平行；两组对边分别相等；一组对边平行且相等</li>
+                    </ul>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-icon">▭</div>
+                    <h3>矩形</h3>
+                    <p>有一个角是直角的平行四边形。</p>
+                    <ul class="card-list">
+                        <li>性质：四个角都是直角</li>
+                        <li>判定：平行四边形 + 一个直角；对角线相等</li>
+                    </ul>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-icon">◇</div>
+                    <h3>菱形</h3>
+                    <p>四条边都相等的平行四边形。</p>
+                    <ul class="card-list">
+                        <li>性质：四边相等、对角线互相垂直平分</li>
+                        <li>判定：平行四边形 + 四边相等；对角线互相垂直</li>
+                    </ul>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-icon">⬠</div>
+                    <h3>正方形</h3>
+                    <p>一组邻边相等且有一个角是直角的平行四边形。</p>
+                    <ul class="card-list">
+                        <li>性质：具有矩形、菱形的一切性质</li>
+                        <li>判定：矩形 + 菱形；对角线互相垂直平分且相等</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <h2 class="section-title">性质与判定对比</h2>
+                <p class="section-subtitle">表格化记忆，快速区分易混淆考点</p>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>图形</th>
+                                <th>性质</th>
+                                <th>判定</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>平行四边形</strong></td>
+                                <td>对边平行且相等；对角相等；邻角互补</td>
+                                <td>两组对边分别平行；两组对边分别相等；一组对边平行且相等</td>
+                            </tr>
+                            <tr>
+                                <td><strong>矩形</strong></td>
+                                <td>四个角都是直角；对角线相等</td>
+                                <td>有一个角是直角的平行四边形；对角线相等的平行四边形</td>
+                            </tr>
+                            <tr>
+                                <td><strong>菱形</strong></td>
+                                <td>四边相等；对角线互相垂直平分</td>
+                                <td>四边相等的平行四边形；对角线互相垂直的平行四边形</td>
+                            </tr>
+                            <tr>
+                                <td><strong>正方形</strong></td>
+                                <td>具有矩形、菱形的所有性质</td>
+                                <td>对角线互相垂直平分且相等的平行四边形</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="practice-section container">
+            <h2 class="section-title">随堂练习</h2>
+            <p class="section-subtitle">巩固所学知识，检测复习效果</p>
+            
+            <div class="practice-tabs">
+                <button class="tab-btn active" onclick="switchTab(this, 1)">基础判定题</button>
+                <button class="tab-btn" onclick="switchTab(this, 2)">性质应用题</button>
+                <button class="tab-btn" onclick="switchTab(this, 3)">综合证明题</button>
+            </div>
+
+            <div class="question-box">
+                <div id="q1" class="question-content">
+                    <p class="question-text">1. 已知四边形 ABCD 中，对角线 AC = BD，且 AC ⟂ BD，则四边形 ABCD 一定是？</p>
+                    <div class="options-grid">
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q1')">A. 平行四边形</div>
+                        <div class="option-item" onclick="checkAnswer(this, true, 'q1')">B. 菱形</div>
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q1')">C. 矩形</div>
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q1')">D. 正方形</div>
+                    </div>
+                    <div id="feedback-q1" class="feedback"></div>
+                </div>
+
+                <div id="q2" class="question-content" style="display: none;">
+                    <p class="question-text">2. 在矩形 ABCD 中，对角线 AC 和 BD 相交于点 O，若 AC = 10，AB = 8，则 OB 的长为？</p>
+                    <div class="options-grid">
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q2')">A. 4</div>
+                        <div class="option-item" onclick="checkAnswer(this, true, 'q2')">B. 5</div>
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q2')">C. 2.5</div>
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q2')">D. 10</div>
+                    </div>
+                    <div id="feedback-q2" class="feedback"></div>
+                </div>
+
+                <div id="q3" class="question-content" style="display: none;">
+                    <p class="question-text">3. 判断：对角线相等的四边形是矩形。（  ）；对角线互相垂直的四边形是菱形。（  ）</p>
+                    <div class="options-grid">
+                        <div class="option-item" onclick="checkAnswer(this, false, 'q3')">A. 正确；正确</div>
+                        <div class="option-item" onclick="checkAnswer(this, true, 'q3')">B. 错误；错误</div>
+                        <div class="option-item" onclick="checkAnswer(this, true, 'q3')">C. 错误；正确</div>
+                        <div class="option-item" onclick="checkAnswer(this, true, 'q3')">D. 正确；错误</div>
+                    </div>
+                    <div id="feedback-q3" class="feedback"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于资源</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">本站提供免费的数学几何复习课件，旨在帮助师生提高教学质量，简化备课流程。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">三角形</a></li>
+                        <li><a href="#">圆与扇形</a></li>
+                        <li><a href="#">统计与概率</a></li>
+                        <li><a href="#">函数基础</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>使用指南</h4>
+                    <ul>
+                        <li><a href="#">如何下载PPT</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 几何课堂 - 四边形复习课件中心. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching logic
+        function switchTab(btn, questionId) {
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            // Hide all question contents
+            const contents = document.querySelectorAll('.question-content');
+            contents.forEach(c => c.style.display = 'none');
+
+            // Show selected content
+            document.getElementById('q' + questionId).style.display = 'block';
+        }
+
+        // Answer checking logic
+        function checkAnswer(element, isCorrect, questionId) {
+            // Reset feedback for this question
+            const feedbackEl = document.getElementById('feedback-' + questionId);
+            feedbackEl.className = 'feedback'; // reset classes
+            
+            // Disable further clicks on this question
+            const options = element.parentElement.querySelectorAll('.option-item');
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+
+            if (isCorrect) {
+                element.style.backgroundColor = '#d4edda';
+                element.style.borderColor = '#28a745';
+                feedbackEl.innerHTML = '<strong>回答正确！</strong> 你掌握了该知识点。';
+                feedbackEl.classList.add('correct');
+            } else {
+                element.style.backgroundColor = '#f8d7da';
+                element.style.borderColor = '#dc3545';
+                
+                // Highlight correct answer
+                options.forEach(opt => {
+                    if (opt.textContent.includes('B')) { // Hardcoded for demo, usually check text content
+                        opt.style.backgroundColor = '#d4edda';
+                        opt.style.borderColor = '#28a745';
+                    }
+                });
+
+                let correctText = '';
+                if(questionId === 'q1') correctText = 'B. 菱形 (对角线垂直且相等的平行四边形是菱形)';
+                if(questionId === 'q2') correctText = 'B. 5 (矩形对角线互相平分)';
+                if(questionId === 'q3') correctText = 'C. 错误；正确 (必须是在平行四边形的前提下)';
+
+                feedbackEl.innerHTML = '<strong>回答错误。</strong> ' + correctText;
+                feedbackEl.classList.add('incorrect');
+            }
+        }
+    </script>
+</body>
+</html>
