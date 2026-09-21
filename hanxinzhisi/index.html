@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩信之死 - 历史典故、悲剧原因与后世评价</title>
+    <meta name="description" content="深入解析韩信之死的历史背景、悲剧原因、相关历史人物与后世评价。探讨这位兵仙在政治斗争中的陨落及其对楚汉战争的影响。">
+    <meta name="keywords" content="韩信之死, 韩信, 楚汉争霸, 萧何月下追韩信, 韩信点兵多多益善, 历史典故">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征悲剧与历史厚重感 */
+            --secondary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #fdfbf7; /* 米色纸张质感 */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/history/1920/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* 章节通用样式 */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* 概述卡片 */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .overview-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .overview-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+            text-align: right;
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 80%;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -9px;
+        }
+
+        .timeline-item:not(:nth-child(even)) .timeline-content::before {
+            left: -9px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* 人物关系 */
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .character-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .char-img {
+            height: 180px;
+            background-color: #eee;
+        }
+        
+        .char-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-info {
+            padding: 1.5rem;
+        }
+
+        .char-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .char-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 原因分析 */
+        .reasons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .reason-card {
+            flex: 1 1 300px;
+            background: #fff;
+            padding: 2rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+
+        .reason-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reason-card ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        .reason-card li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #ccc;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item, .timeline-item:nth-child(even) {
+                padding-left: 50px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content::before {
+                right: auto;
+                left: 12px;
+            }
+
+            .timeline-item:not(:nth-child(even)) .timeline-content::before {
+                left: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>⚔️</span> 历史典故
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#overview">事件概述</a></li>
+                    <li><a href="#timeline">关键时间线</a></li>
+                    <li><a href="#characters">相关人物</a></li>
+                    <li><a href="#reasons">悲剧原因</a></li>
+                    <li><a href="#evaluation">后世评价</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>韩信之死</h1>
+                <p>汉初三杰之一，兵仙韩信的最终结局。从布衣到封王，再到被吕后与萧何合谋处死于长乐宫钟室，其死因至今仍是历史学家争论的焦点。</p>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="container">
+            <h2 class="section-title">事件概述</h2>
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <p><strong>韩信之死</strong>是中国历史上著名的悲剧事件之一，发生于汉高祖六年（公元前201年）。作为汉朝的开国功臣，韩信在楚汉战争时期发挥了决定性作用，曾帮助刘邦击败项羽，奠定了汉朝基业。然而，随着汉朝的建立，韩信作为异姓王的权势成为了刘邦和吕后的政治威胁。</p>
+                    <p>最终，在萧何的策划下，吕后诱骗韩信入宫，将其囚禁于长乐宫钟室，并处决了他。这场处决不仅结束了一位军事天才的生命，也标志着异姓王势力的进一步削弱。韩信死后，其家族成员大多被诛杀，仅存一子被赦免。</p>
+                </div>
+                <div class="overview-image">
+                    <img src="https://picsum.photos/seed/hanxin/600/400" alt="历史氛围图片">
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="container">
+            <h2 class="section-title">关键时间线</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前207年</span>
+                        <h3>萧何月下追韩信</h3>
+                        <p>韩信在项羽军中不得志，转投刘邦。初未受重视，后经萧何极力推荐，刘邦拜为大将，开启军事生涯。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前206年</span>
+                        <h3>明修栈道，暗度陈仓</h3>
+                        <p>韩信协助刘邦出兵关中，平定三秦，拉开了楚汉战争的序幕，展现出卓越的军事指挥才能。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前202年</span>
+                        <h3>垓下之战，十面埋伏</h3>
+                        <p>韩信在垓下布下天罗地网，击败项羽，迫使项羽自刎乌江，彻底终结了楚汉争霸的格局。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前201年</span>
+                        <h3>封齐王，后贬为楚王</h3>
+                        <p>韩信被封为齐王，后因有人告发其谋反，刘邦伪游云梦擒获韩信，将其降为淮阴侯。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前196年</span>
+                        <h3>长乐宫钟室，身死</h3>
+                        <p>陈豨造反，刘邦在前线平叛，吕后与萧何设计将韩信骗入宫中，将其处死于长乐宫钟室。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters" class="container">
+            <h2 class="section-title">相关人物</h2>
+            <div class="characters-grid">
+                <article class="character-card">
+                    <div class="char-img">
+                        <img src="https://picsum.photos/seed/liu/400/300" alt="刘邦">
+                    </div>
+                    <div class="char-info">
+                        <h3>刘邦</h3>
+                        <p>汉高祖，汉朝开国皇帝。虽曾重用韩信，但深知功高震主的风险，最终为了皇权稳固，默许了韩信的结局。</p>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="char-img">
+                        <img src="https://picsum.photos/seed/xiaohe/400/300" alt="萧何">
+                    </div>
+                    <div class="char-info">
+                        <h3>萧何</h3>
+                        <p>汉朝开国功臣，与张良、韩信并称“汉初三杰”。他一手提拔韩信，最终却为了自保和吕后的政治利益，设计诱捕了韩信。</p>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="char-img">
+                        <img src="https://picsum.photos/seed/lv/400/300" alt="吕后">
+                    </div>
+                    <div class="char-info">
+                        <h3>吕后（吕雉）</h3>
+                        <p>汉高祖皇后，实权统治者。她心狠手辣，为了维护刘氏江山和自身地位，果断铲除异姓王，是韩信之死的直接执行者。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Reasons Section -->
+        <section id="reasons" class="container">
+            <h2 class="section-title">悲剧原因分析</h2>
+            <div class="reasons-container">
+                <div class="reason-card">
+                    <h3>🛡️ 功高震主</h3>
+                    <p>韩信在楚汉战争期间拥有绝对的军事指挥权，功勋卓著，威望极高。这种超越君主的声望让刘邦感到不安。</p>
+                </div>
+                <div class="reason-card">
+                    <h3>⚔️ 异姓王威胁</h3>
+                    <p>韩信被封为楚王，封地广袤，且手握重兵。在古代政治中，强大的异姓诸侯王往往被视为对中央集权的最大威胁。</p>
+                </div>
+                <div class="reason-card">
+                    <h3>🤝 政治站队失误</h3>
+                    <p>在刘邦与项羽相持的关键时刻，韩信曾索要“假齐王”的封号，虽然最终如愿，但这被视为对皇权的挑战。此外，他对刘邦的猜忌缺乏足够的政治敏感度。</p>
+                </div>
+                <div class="reason-card">
+                    <h3>🕸️ 朝廷内部矛盾</h3>
+                    <p>萧何虽与韩信关系深厚，但为了保全家族利益，选择了与吕后站在一起。朝中大臣多畏惧吕后，无人敢为韩信求情。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evaluation Section -->
+        <section id="evaluation" class="container">
+            <h2 class="section-title">后世评价</h2>
+            <div class="overview-text">
+                <p>关于韩信之死，历代史学家和文人多有评价。唐代诗人李商隐在《咏史》中写道：<strong>“成王萧相国，功业未全收。一旦功成后，千秋恨未休。……”</strong> 表达了对韩信命运悲剧性的感叹。</p>
+                <p>司马迁在《史记》中对韩信的评价极高，称其“国士无双”，认为他是“兵仙”，但也指出其“勇略盖主”的弱点，指出“飞鸟尽，良弓藏；狡兔死，走狗烹”是历代功臣的宿命。</p>
+                <p>从现代历史观来看，韩信之死是封建皇权专制制度下的必然结果。他虽然拥有卓越的军事才能，但在政治智慧上相对欠缺，最终成为了政治斗争的牺牲品。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>历史典故</h4>
+                    <p>致力于传播中华传统文化与历史知识，为您梳理历史脉络，解析经典典故。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#overview">事件概述</a></li>
+                        <li><a href="#timeline">时间线</a></li>
+                        <li><a href="#characters">人物关系</a></li>
+                        <li><a href="#reasons">原因分析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关词条</h4>
+                    <ul>
+                        <li><a href="#">楚汉争霸</a></li>
+                        <li><a href="#">鸿门宴</a></li>
+                        <li><a href="#">背水一战</a></li>
+                        <li><a href="#">四面楚歌</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 历史典故资料库. All Rights Reserved. 仅供学习与交流使用.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
