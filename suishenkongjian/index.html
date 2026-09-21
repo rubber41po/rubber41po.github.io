@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="随身空间军婚三年灾难专题，提供灾难前传剧情解析、随身空间设定详解、军婚情感走向分析及经典作品推荐。深度探讨主角在绝境中的生存智慧与情感羁绊。">
+    <meta name="keywords" content="随身空间军婚三年灾难,军婚小说,随身空间,灾难生存,小说推荐">
+    <title>随身空间军婚三年灾难-绝境生存与情感救赎指南</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-light: #f9f9f9;
+            --text-main: #333;
+            --text-light: #666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: -2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Main Column */
+        .main-column {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* List Items */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .article-item {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .article-img {
+            width: 200px;
+            height: 140px;
+            background-color: #eee;
+            border-radius: 6px;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .rank-num {
+            width: 20px;
+            font-weight: 700;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+
+        .rank-item:nth-child(1) .rank-num { font-size: 1.2rem; }
+        .rank-item:nth-child(2) .rank-num { font-size: 1.1rem; }
+        .rank-item:nth-child(3) .rank-num { font-size: 1rem; }
+
+        .rank-name {
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Feature Cards */
+        .features {
+            background-color: var(--bg-light);
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--border-color);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background: #fff;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            border-left: 3px solid #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>◆</span> 军婚小说馆
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">分类浏览</a></li>
+                <li><a href="#">作者专区</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>随身空间军婚三年灾难</h1>
+        <p>深度解析灾难背景下，拥有随身空间的军婚情感故事。探讨绝境生存、身份差异与深陷战火中的爱情救赎。</p>
+        <div class="hero-tags">
+            <span class="tag">随身空间</span>
+            <span class="tag">军婚</span>
+            <span class="tag">灾难生存</span>
+            <span class="tag">虐恋情深</span>
+            <span class="tag">强强联合</span>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="content-grid">
+        <!-- Main Content -->
+        <main class="main-column">
+            <section>
+                <div class="section-title">
+                    <h2>精选作品解析</h2>
+                    <a href="#">查看更多 &gt;</a>
+                </div>
+                
+                <div class="article-list">
+                    <article class="article-item">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/war1/200/140" alt="灾难背景封面">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>分类：军婚/穿越</span>
+                                <span>热度：98%</span>
+                            </div>
+                            <h3 class="article-title"><a href="#">随身空间：军婚三年，灾难降临后的生存法则</a></h3>
+                            <p class="article-excerpt">
+                                在全球灾难降临的背景下，女主利用随身空间囤积物资，与身为特种兵的男主在废墟中重逢。本文将深度解析空间设定在灾难中的实际应用，以及军婚在极端环境下的情感变化...
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/war2/200/140" alt="废墟场景">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>分类：现代言情</span>
+                                <span>热度：92%</span>
+                            </div>
+                            <h3 class="article-title"><a href="#">三年军婚：当随身空间成为唯一的希望</a></h3>
+                            <p class="article-excerpt">
+                                主角在婚后第三年遭遇了前所未有的浩劫，随身空间再次开启，成为了全人类最后的庇护所。本文探讨了资源分配、人性考验以及在灾难面前，军婚誓言的重量。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-img">
+                            <img src="https://picsum.photos/seed/war3/200/140" alt="情感互动">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>分类：甜宠/爽文</span>
+                                <span>热度：85%</span>
+                            </div>
+                            <h3 class="article-title"><a href="#">随身空间军婚：废土之上的甜蜜日常</a></h3>
+                            <p class="article-excerpt">
+                                即使在末世，爱情依然存在。本文讲述了一对拥有空间系统的夫妻，如何在充满危险的废土上建立温馨的小家，以及男主如何利用军人的能力守护女主的空间秘密。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h4 class="widget-title">热门榜单</h4>
+                <ul class="rank-list">
+                    <li class="rank-item">
+                        <span class="rank-num">1</span>
+                        <span class="rank-name">随身空间：军婚三年灾难</span>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">2</span>
+                        <span class="rank-name">末世之随身空间</span>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">3</span>
+                        <span class="rank-name">军婚：空间里的生存日记</span>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">4</span>
+                        <span class="rank-name">重生之军嫂</span>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">5</span>
+                        <span class="rank-name">灾难降临：我的军装老公</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h4 class="widget-title">标签云</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a href="#" class="tag">随身空间</a>
+                    <a href="#" class="tag">军婚</a>
+                    <a href="#" class="tag">灾难</a>
+                    <a href="#" class="tag">末世</a>
+                    <a href="#" class="tag">特种兵</a>
+                    <a href="#" class="tag">囤货</a>
+                    <a href="#" class="tag">甜宠</a>
+                    <a href="#" class="tag">虐恋</a>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h4 class="widget-title">阅读指南</h4>
+                <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                    本站专注于整理与推荐包含“随身空间”与“军婚”元素，且背景设定涉及“三年灾难”或末世生存的小说。请根据个人喜好选择阅读。
+                </p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<section class="features">
+    <div class="container">
+        <div class="section-title" style="justify-content: center; border: none; font-size: 1.8rem;">
+            核心看点解析
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚔️</div>
+                <h3>生存技能</h3>
+                <p>主角如何利用随身空间中的物资，在灾难初期建立生存优势，以及与男主配合的战术动作。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>情感羁绊</h3>
+                <p>探讨三年军婚积累的信任，在面对生离死别时，爱情如何转化为坚定的守护力量。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏰</div>
+                <h3>空间设定</h3>
+                <p>解析随身空间在灾难中的具体功能，如时间静止、物资储备、以及空间内的特殊环境。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>军旅元素</h3>
+                <p>男主作为军人，在灾难中的指挥能力、对女主的保护，以及军队在末世中的特殊地位。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>常见问题 (FAQ)</h2>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                什么是“随身空间军婚三年灾难”题材？
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                这是一种结合了“随身空间”、“军婚”和“灾难/末世”元素的网络小说题材。故事通常讲述女主角拥有一个随身空间，与军人丈夫在婚后第三年遭遇全球性灾难，两人利用空间中的资源在废土中求生，并共同面对人性的考验。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                这种题材的小说通常有哪些看点？
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                主要看点包括：女主利用空间囤积物资的“囤货”爽感、男主作为军人的强大武力值与保护欲、两人在极端环境下的情感升华、以及废土生存的紧张氛围。通常伴随着“先婚后爱”或“重逢”的情节。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                在灾难背景下，军婚关系有何特殊性？
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                在灾难背景下，军婚关系更加紧密。军人拥有组织、纪律和武器，往往成为群体中的核心。夫妻双方不仅是爱人，更是生死与共的战友。这种关系在危机时刻往往比普通婚姻更加坚韧。
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>军婚小说馆</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    专注收录各类优质军婚小说，特别是包含随身空间与灾难生存题材的作品。为您推荐最精彩的阅读体验。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">最新发布</a></li>
+                    <li><a href="#">分类大全</a></li>
+                    <li><a href="#">作者投稿</a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关专题</h4>
+                <ul>
+                    <li><a href="#">末世求生指南</a></li>
+                    <li><a href="#">军人形象解析</a></li>
+                    <li><a href="#">空间系统设定</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 军婚小说馆. All Rights Reserved. 本站内容仅供学习交流使用.
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
